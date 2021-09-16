@@ -7,11 +7,19 @@ public class Child extends Person {
         parent1 = new Person();
         parent2 = new Person();
     }
+    public Child(String first, String middle, String last, String age, String gender){
+        super(first,middle,last,age,gender);
+    }
+    public Child(String first, String middle, String last, String age, String gender, Parent a){
+        super(first,middle,last,age,gender);
+        setParent1(a);
+    }
     public Child(String first, String middle, String last, String age, String gender, Parent a, Parent b){
         super(first,middle,last,age,gender);
         setParent1(a);
         setParent2(b);
     }
+
 
     public Person getParent1() {
         return parent1;
